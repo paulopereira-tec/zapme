@@ -1,15 +1,20 @@
 {
-  "name": "ZapMe.Blazor",
-  "short_name": "ZapMe.Blazor",
+  "name": "ZapMe",
+  "short_name": "ZapMe - Envie mensagens utilizando whatsapp web",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#03173d",
   "icons": [
     {
-      "src": "icon-512.png",
+      "src": "/images/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ]
 }
