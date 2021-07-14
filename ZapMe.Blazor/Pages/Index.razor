@@ -1,0 +1,47 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+<div id="login-page">
+  <div class="card login-card mb-4">
+    <div class="card-body">
+      <img src="images/icon-512.png" alt="WhatsApp" width="150" />
+      <h5 class="text-info text-center mt-3">Enviar mensagem pelo WhatsApp Web</h5>
+      <p>Digite o número de telefone para enviar uma mensagem usando o <strong>WhatsApp Web</strong></p>
+      <hr />
+      <div class="row">
+        <div class="col-3">
+          <label>DDI:</label>
+          <input type="text" @bind="countryCode" class="form-control text-center mb-3" disabled />
+        </div>
+
+        <div class="col-3">
+          <label>DDD:</label>
+          <input type="text" @bind="regionCode" class="form-control text-center mb-3" />
+        </div>
+
+        <div class="col-6">
+          <label>Telefone:</label>
+          <input type="text" @bind-value="phone" class="form-control mb-3 text-center" autofocus />
+        </div>
+      </div>
+
+      <button class="btn btn-info btn-block btn-lg" @onclick="SendMessage">
+        <i class="fab fa-whatsapp"></i> Enviar mensagem
+      </button>
+    </div>
+  </div>
+</div>
+
+@code{
+  string countryCode { get; set; } = "+55";
+  string regionCode { get; set; } = "21";
+  string phone { get; set; } = string.Empty;
+
+  protected async void SendMessage()
+  {
+    string url = "https://wa.me/" + countryCode.Replace("+", "") + regionCode + phone;
+    await js.InvokeVoidAsync("open", url, "_blank");
+
+    Console.WriteLine("Enviando mensagem");
+  }
+}
