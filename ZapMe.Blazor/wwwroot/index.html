@@ -15,7 +15,29 @@
 </head>
 
 <body>
-    <div id="app">Aguarde, baixando aplicativo...</div>
+    <div id="app" class="d-none d-sm-none d-md-none d-lg-block">
+      <div class="card text-center m-5">
+        <div class="card-body">
+          <img src="images/loading.gif" alt="Carregando" />
+          <h5>Aguarde, carregando aplicativo...</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-sm-block d-md-none d-lg-none text-center m-4">
+      <img src="images/icon-sad.png" alt="Alternate Text" />
+      <div class="card bg-info mt-5 mb-3">
+        <div class="card-body">
+          <h5 class="text-white mt-4">Ah! me desculpa, mas eu fui feito pra ser usado somente no computador.</h5>
+        </div>
+      </div>
+      <p><small>Desenvolvido com <i class="far fa-heart text-danger"></i> usando C# e Blazor/WebAssembly</small></p>
+      <h6>
+        © 2021 <strong>Paulo Pereira</strong> |
+        <a href="https://github.com/paulopereira-tec" target="_blank"> <i class="fab fa-github-alt"></i> </a> |
+        <a href="https://www.linkedin.com/in/paulo-pereira-aa93ab26/" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+      </h6>
+    </div>
 
     <div id="blazor-error-ui">
         Ops! ocorreu algum erro ao baixar o aplicativo.
