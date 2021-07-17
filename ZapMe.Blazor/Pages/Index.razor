@@ -9,17 +9,17 @@
       <p>Digite o número de telefone para enviar uma mensagem usando o <strong>WhatsApp Web</strong></p>
       <hr />
       <div class="row">
-        <div class="col-3">
+        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
           <label>DDI:</label>
           <input type="text" @bind="countryCode" class="form-control text-center mb-3" />
         </div>
 
-        <div class="col-3">
+        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
           <label>DDD:</label>
           <input type="text" @bind="regionCode" class="form-control text-center mb-3" />
         </div>
 
-        <div class="col-6">
+        <div class="col-sm-12 col-md-12 col-lg-6 mt-3">
           <label>Telefone:</label>
           <input type="text" @bind-value="phone" class="form-control mb-3 text-center" autofocus />
         </div>
